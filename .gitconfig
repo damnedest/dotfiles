@@ -1,0 +1,34 @@
+[user]
+	name = Evgeniy Reykh
+	email = evreykh@avito.ru
+[core]
+	editor = vim
+	excludesfile = /Users/evreykh/.gitignore_global
+[merge]
+	tool = vimdiff
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+[push]
+	default = simple
+[alias]
+    up = !(git stash && git pull --rebase >&2) | grep -v \"No local changes to save\" && git stash pop
+    in = "!git remote update -p; git log ..@{u}"
+    out = log @{u}..
+    st = status -sb
+    ci = commit
+    co = checkout
+    br = branch
+    chp = cherry-pick
+    pr = pull --rebase
+    bl = blame -b -w
+    cia = commit --amend
+    lg = log --pretty=format:'%h was %an, %ar, message: %s' --graph
+    who = shortlog -s --
+    tl = !(git tag --sort "-v:refname") | head -n 10
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	required = true
+	process = git-lfs filter-process
