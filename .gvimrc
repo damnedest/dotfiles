@@ -1,1 +1,4 @@
-/Users/evreykh/Dropbox/DamniConf/.gvimrc
+set guifont=Consolas\ 11
+
+set background=dark
+colorscheme solarized
