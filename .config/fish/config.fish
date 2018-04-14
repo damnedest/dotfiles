@@ -22,7 +22,13 @@ alias logc="grc cat"
 alias logt="grc tail"
 alias logh="grc head"
 
-#'\[\033[00;32m\][\D{%d.%m %R}] \[\033[01;31m\]`__git_ps1 "%s "`\[\033[00m\]\[\033[01;32m\]\h\[\033[01;34m\] \w \$ \[\033[00m\]'
+alias climb="composer outdated --outdated"
+
+set -U HISTFILESIZE 1000000
+set -U HISTSIZE 1000000
+set -U HISTCONTROL ignoreboth
+set -U HISTIGNORE 'ls:bg[ \t]*:fg[ \t]*:history[ \t]*'
+set -U HISTTIMEFORMAT '%d.%m.%y %T '
 
 function fish_prompt
     set -l git_branch (git branch ^/dev/null | sed -n '/\* /s///p')
