@@ -1,7 +1,6 @@
 alias gst='git status'
 alias ga='git add'
 alias gci='git commit -m'
-alias gp='git pull && git push'
 alias gull='git pull'
 alias gush='git push'
 alias gb='git branch'
