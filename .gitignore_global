@@ -25,7 +25,8 @@ Session.vim
 .Trashes
 
 #Linux
-#.*
+.*
+!.config
 !.gitignore
 !.gitattributes
 !.gitkeep
