@@ -21,3 +21,29 @@ alias ifconfig="grc ifconfig"
 alias logc="grc cat"
 alias logt="grc tail"
 alias logh="grc head"
+
+#'\[\033[00;32m\][\D{%d.%m %R}] \[\033[01;31m\]`__git_ps1 "%s "`\[\033[00m\]\[\033[01;32m\]\h\[\033[01;34m\] \w \$ \[\033[00m\]'
+
+function fish_prompt
+    set -l git_branch (git branch ^/dev/null | sed -n '/\* /s///p')
+    set -l current_time (date '+%d.%m %R')
+
+    set_color green
+    echo -ne '['
+    echo -ne "$current_time"
+    echo -ne ']'
+    set_color normal
+
+    if test "$git_branch" != ''
+       set_color red
+       echo -ne " $git_branch"
+       set_color normal
+    end
+
+    echo -ne ' '
+    set_color blue
+    echo -n (prompt_pwd)
+    echo -ne ' '
+    echo -ne '$ '
+    set color normal
+end
