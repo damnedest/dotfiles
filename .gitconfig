@@ -3,7 +3,7 @@
 	email = evreykh@avito.ru
 [core]
 	editor = vim
-	excludesfile = /Users/evreykh/.gitignore_global
+	excludesfile = ~/.gitignore_global
 [merge]
 	tool = vimdiff
 [color]
