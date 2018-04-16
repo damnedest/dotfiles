@@ -30,6 +30,8 @@ set -U HISTCONTROL ignoreboth
 set -U HISTIGNORE 'ls:bg[ \t]*:fg[ \t]*:history[ \t]*'
 set -U HISTTIMEFORMAT '%d.%m.%y %T '
 
+set fish_greeting ""
+
 function fish_prompt
     set -l git_branch (git branch ^/dev/null | sed -n '/\* /s///p')
     set -l current_time (date '+%d.%m %R')
