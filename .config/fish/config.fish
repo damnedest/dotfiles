@@ -11,6 +11,9 @@ alias gha='git log --graph --date=relative --all --topo-order --pretty=format:'\
 alias pu="phing git-update"
 alias puf="phing git-update-full"
 
+alias psql-old='/usr/bin/psql'
+alias psql='pgcli'
+
 alias ping="grc ping"
 alias traceroute="grc traceroute"
 alias make="grc make"
