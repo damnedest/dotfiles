@@ -33,6 +33,8 @@ set -U HISTCONTROL ignoreboth
 set -U HISTIGNORE 'ls:bg[ \t]*:fg[ \t]*:history[ \t]*'
 set -U HISTTIMEFORMAT '%d.%m.%y %T '
 
+set PATH $HOME/.composer/vendor/bin ./vendor/bin $PATH
+
 set fish_greeting ""
 
 function fish_prompt
