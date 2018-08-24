@@ -13,6 +13,7 @@ alias puf="phing git-update-full"
 
 alias psql-old='/usr/bin/psql'
 alias psql='pgcli'
+alias gclean='git rm .gitattributes; git add -A; git reset --hard'
 
 alias ping="grc ping"
 alias traceroute="grc traceroute"
