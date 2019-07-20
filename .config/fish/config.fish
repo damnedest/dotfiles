@@ -34,9 +34,41 @@ set -U HISTCONTROL ignoreboth
 set -U HISTIGNORE 'ls:bg[ \t]*:fg[ \t]*:history[ \t]*'
 set -U HISTTIMEFORMAT '%d.%m.%y %T '
 
-set PATH $HOME/.composer/vendor/bin ./vendor/bin $PATH
+set PATH $HOME/.composer/vendor/bin ./vendor/bin ./node_modules/.bin $PATH
 
 set fish_greeting ""
+
+#function sync_history --on-event fish_preexec
+#    history --save
+#    history --merge
+#end
+function up-or-search -d "Depending on cursor position and current mode, either search backward or move up one line"
+    # If we are already in search mode, continue
+    if commandline --search-mode
+        commandline -f history-search-backward
+        return
+    end
+
+    # If we are navigating the pager, then up always navigates
+    if commandline --paging-mode
+        commandline -f up-line
+        return
+    end
+
+    # We are not already in search mode.
+    # If we are on the top line, start search mode,
+    # otherwise move up
+    set lineno (commandline -L)
+
+    switch $lineno
+        case 1
+            commandline -f history-search-backward
+            history merge # <-- ADDED THIS
+
+        case '*'
+            commandline -f up-line
+    end
+end
 
 function fish_prompt
     set -l git_branch (git branch ^/dev/null | sed -n '/\* /s///p')

@@ -26,6 +26,7 @@ Session.vim
 
 #Linux
 .*
+!.env*
 !.config
 !.gitignore
 !.gitattributes
@@ -41,7 +42,6 @@ Session.vim
 .directory
 
 ehthumbs.db
-Icon?
 Thumbs.db
 
 # Compiled source #
