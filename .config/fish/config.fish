@@ -1,3 +1,5 @@
+export LANGUAGE='en_US.UTF-8 git'
+
 alias gst='git status'
 alias ga='git add'
 alias gci='git commit -m'
@@ -8,23 +10,15 @@ alias gco='git checkout'
 alias gd='git diff'
 alias gha='git log --graph --date=relative --all --topo-order --pretty=format:'\''%C(cyan)[%an]%Creset %C(green bold)%d%Creset %C(yellow)%h%Creset : %s %C(cyan)[%ad]%Creset'\'''
 
+alias psqld='psql -D d'
+alias psqlk='psql -D k'
+
 alias pu="phing git-update"
 alias puf="phing git-update-full"
 
 alias psql-old='/usr/bin/psql'
 alias psql='pgcli'
 alias gclean='git rm .gitattributes; git add -A; git reset --hard'
-
-alias ping="grc ping"
-alias traceroute="grc traceroute"
-alias make="grc make"
-alias diff="grc diff"
-alias cvs="grc cvs"
-alias netstat="grc netstat"
-alias ifconfig="grc ifconfig"
-alias logc="grc cat"
-alias logt="grc tail"
-alias logh="grc head"
 
 alias climb="composer outdated --outdated"
 
