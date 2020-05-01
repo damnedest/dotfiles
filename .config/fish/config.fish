@@ -13,8 +13,8 @@ alias gha='git log --graph --date=relative --all --topo-order --pretty=format:'\
 alias psqld='psql -D d'
 alias psqlk='psql -D k'
 
-alias pu="phing git-update"
-alias puf="phing git-update-full"
+alias ls-old='/bin/ls'
+alias ls='exa'
 
 alias psql-old='/usr/bin/psql'
 alias psql='pgcli'
@@ -28,7 +28,7 @@ set -U HISTCONTROL ignoreboth
 set -U HISTIGNORE 'ls:bg[ \t]*:fg[ \t]*:history[ \t]*'
 set -U HISTTIMEFORMAT '%d.%m.%y %T '
 
-set PATH $HOME/.composer/vendor/bin ./vendor/bin ./node_modules/.bin $PATH
+set PATH $HOME/.composer/vendor/bin $HOME/go/bin ./vendor/bin ./node_modules/.bin $PATH
 
 set fish_greeting ""
 
