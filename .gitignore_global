@@ -4,7 +4,6 @@
 Session.vim
 .netrwhist
 *~
-.php_cs
 
 # Logs and databases #
 # ######################
@@ -34,6 +33,8 @@ Session.vim
 !.travis.yml
 !.apishka.php
 !.bowerrc
+!.php_cs
+!.php_cs.dist
 !.editorconfig
 !.ctags.options
 *~

@@ -2,7 +2,7 @@
 	name = Evgeniy Reykh
 	email = evreykh@avito.ru
 [core]
-	editor = vim
+	editor = nvim
 	excludesfile = ~/.gitignore_global
 [merge]
 	tool = vimdiff
