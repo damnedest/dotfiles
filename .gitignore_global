@@ -26,6 +26,7 @@ Session.vim
 #Linux
 .*
 !.env*
+.env.dev
 !.config
 !.gitignore
 !.gitattributes

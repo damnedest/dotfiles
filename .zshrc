@@ -110,6 +110,7 @@ alias gull='git pull'
 alias gush='git push'
 alias gb='git branch'
 alias gco='git checkout'
+alias gcm='git checkout master'
 alias gd='git diff'
 alias gha='git log --graph --date=relative --all --topo-order --pretty=format:'\''%C(cyan)[%an]%Creset %C(green bold)%d%Creset %C(yellow)%h%Creset : %s %C(cyan)[%ad]%Creset'\'''
 
